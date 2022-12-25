@@ -11,4 +11,5 @@
     <string name="km_percorrido">Km percorrido</string>
     <string name="calcular">Calcular</string>
     <string name="calcular_autonomia">Calcular Autonomia</string>
+    <string name="cd_calcular">Botão de calcular autonomia</string>
 </resources>
