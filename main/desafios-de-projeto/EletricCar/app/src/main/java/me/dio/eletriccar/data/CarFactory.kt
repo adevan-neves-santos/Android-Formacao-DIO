@@ -11,6 +11,7 @@ object CarFactory {
             ,potencia = "20cv"
             ,recarga  = "30 min"
             ,urlPhoto = "www.google.com"
+            ,isFavorite = false
         ),
         Carro(
              id       = 2
@@ -19,6 +20,7 @@ object CarFactory {
             ,potencia = "150cv"
             ,recarga  = "40 min"
             ,urlPhoto = "www.google.com"
+            ,isFavorite = false
         )
     )
 }

@@ -132,17 +132,15 @@ class CarFragment : Fragment() {
             isVisible = true
             adapter = carroAdapter
         }
+        carroAdapter.carItemLister = {carro ->
+            val bateria = carro.bateria
+        }
     }
 
     private fun setupListeners() {
         btnCalcular.setOnClickListener {
             startActivity(Intent(context,CalcularAutonomiaActivity::class.java))
         }
-    }
-
-    private fun callService(){
-        val urlBase = "https://igorbag.github.io/cars-api/cars.json"
-        MyTask().execute(urlBase)
     }
 
     private fun checkForInternet(context: Context?) : Boolean{
@@ -158,86 +156,6 @@ class CarFragment : Fragment() {
         } else {
             val networkInfo = connectivityManager.activeNetworkInfo ?: return false
             return networkInfo.isConnected
-        }
-    }
-
-    inner class MyTask:AsyncTask<String,String,String>(){
-
-        override fun onPreExecute() {
-            super.onPreExecute()
-            Log.d("MyTask","Iniciando ...")
-            progress.isVisible = true
-        }
-
-        override fun doInBackground(vararg url: String?): String {
-            var urlConnection: HttpURLConnection? = null
-            try {
-                val urlBase = URL(url[0])
-                urlConnection = urlBase.openConnection() as HttpURLConnection
-                urlConnection.connectTimeout = 60000
-                urlConnection.readTimeout = 60000
-                urlConnection.setRequestProperty(
-                     "Accept"
-                    ,"application/json"
-                )
-
-                val respondeCode = urlConnection.responseCode
-                if(respondeCode == HttpURLConnection.HTTP_OK){
-                    var response = urlConnection.inputStream.bufferedReader().use { it.readText() }
-                    publishProgress(response)
-                } else {
-                    Log.e("Erro","Serviço indisponível no momento ...")
-                }
-
-            } catch (ex:Exception){
-                Log.e("Erro","Erro ao realizar processamento ...")
-            } finally {
-                urlConnection?.disconnect()
-            }
-            return " "
-        }
-
-        override fun onProgressUpdate(vararg values: String?) {
-            try {
-                carrosArray = ArrayList()
-                val jsonArray = JSONTokener(values[0]).nextValue() as JSONArray
-                for(i in 0 until jsonArray.length()){
-                    val id = jsonArray.getJSONObject(i).getString("id")
-                    Log.d("ID -->",id)
-
-                    val preco = jsonArray.getJSONObject(i).getString("preco")
-                    Log.d("Preço -->",preco)
-
-                    val bateria = jsonArray.getJSONObject(i).getString("bateria")
-                    Log.d("Bateria -->",bateria)
-
-                    val potencia = jsonArray.getJSONObject(i).getString("potencia")
-                    Log.d("Potência -->",potencia)
-
-                    val recarga = jsonArray.getJSONObject(i).getString("recarga")
-                    Log.d("Recarga -->",recarga)
-
-                    val urlPhoto = jsonArray.getJSONObject(i).getString("urlPhoto")
-                    Log.d("UrlPhoto -->",urlPhoto)
-
-                    val model =  Carro(
-                         id       = id.toInt()
-                        ,preco    = preco
-                        ,bateria  = bateria
-                        ,potencia = potencia
-                        ,recarga  = recarga
-                        ,urlPhoto = urlPhoto
-                    )
-                    carrosArray.add(model)
-                    Log.d("Model -> ",model.toString())
-                }
-                progress.isVisible        = false
-                noInternetImage.isVisible = false
-                noInternetText.isVisible  = false
-                //setupList()
-            } catch (ex:Exception){
-                Log.e("Erro",ex.message.toString())
-            }
         }
     }
 }
