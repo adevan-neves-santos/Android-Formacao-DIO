@@ -70,6 +70,7 @@ class CalcularAutonomiaActivity : AppCompatActivity() {
         val sharedPref = getPreferences(Context.MODE_PRIVATE) ?: return
         with(sharedPref.edit()){
             putFloat(getString(R.string.saved_cal),resultado)
+            apply()
         }
     }
 
