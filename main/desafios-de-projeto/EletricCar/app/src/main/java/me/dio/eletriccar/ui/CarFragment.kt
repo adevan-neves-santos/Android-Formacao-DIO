@@ -1,5 +1,6 @@
 package me.dio.eletriccar.ui
 
+import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
@@ -22,6 +23,15 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import me.dio.eletriccar.R
 import me.dio.eletriccar.data.CarFactory
 import me.dio.eletriccar.data.CarsApi
+import me.dio.eletriccar.data.local.CarRepository
+import me.dio.eletriccar.data.local.CarrosContract
+import me.dio.eletriccar.data.local.CarrosContract.CarEntry.COLUMN_NAME_PRECO
+import me.dio.eletriccar.data.local.CarrosContract.CarEntry.COLUMN_NAME_BATERIA
+import me.dio.eletriccar.data.local.CarrosContract.CarEntry.COLUMN_NAME_POTENCIA
+import me.dio.eletriccar.data.local.CarrosContract.CarEntry.COLUMN_NAME_RECARGA
+import me.dio.eletriccar.data.local.CarrosContract.CarEntry.COLUMN_NAME_URL_PHOTO
+import me.dio.eletriccar.data.local.CarrosContract.CarEntry.TABLE_NAME
+import me.dio.eletriccar.data.local.CarsDbHelper
 import me.dio.eletriccar.databinding.CarFragmentBinding
 import me.dio.eletriccar.domain.Carro
 import me.dio.eletriccar.ui.adapter.CarAdapter
@@ -133,7 +143,7 @@ class CarFragment : Fragment() {
             adapter = carroAdapter
         }
         carroAdapter.carItemLister = {carro ->
-            val bateria = carro.bateria
+            val isSaved = CarRepository(requireContext()).saveIfNotExists(carro)
         }
     }
 

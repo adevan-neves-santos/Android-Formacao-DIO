@@ -1,5 +1,6 @@
 package me.dio.eletriccar.ui.adapter
 
+import android.text.BoringLayout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import me.dio.eletriccar.R
 import me.dio.eletriccar.domain.Carro
 
-class CarAdapter(private val carros: List<Carro>) :
+class CarAdapter(private val carros: List<Carro>, private val isFavoriteScreen:Boolean = false) :
     RecyclerView.Adapter<CarAdapter.ViewHolder>() {
 
     var carItemLister : (Carro) -> Unit = {}
@@ -30,6 +31,9 @@ class CarAdapter(private val carros: List<Carro>) :
             holder.bateria.text = bateria
             holder.potencia.text = potencia
             holder.recarga.text  = recarga
+            if(isFavoriteScreen){
+                holder.favorito.setImageResource(R.drawable.ic_star_selected)
+            }
             holder.favorito.setOnClickListener {
                 carItemLister(carroItem)
                 carroItem.isFavorite = !carroItem.isFavorite
