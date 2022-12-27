@@ -2,4 +2,6 @@
     <string name="app_name">GitHubSearch</string>
     <string name="nome_usuario">Nome do usuário</string>
     <string name="confirmar">Confirmar</string>
+    <string name="save_user_name">save_user_name</string>
+    <string name="error_message">Erro na recuperação dos repositórios!!!</string>
 </resources>

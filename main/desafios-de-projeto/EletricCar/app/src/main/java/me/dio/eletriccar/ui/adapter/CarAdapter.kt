@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import me.dio.eletriccar.R
 import me.dio.eletriccar.domain.Carro
 
-class CarAdapter(private val carros: List<Carro>, private val isFavoriteScreen:Boolean = false) :
+class CarAdapter(var carros: List<Carro>, private val isFavoriteScreen:Boolean = false) :
     RecyclerView.Adapter<CarAdapter.ViewHolder>() {
 
     var carItemLister : (Carro) -> Unit = {}
