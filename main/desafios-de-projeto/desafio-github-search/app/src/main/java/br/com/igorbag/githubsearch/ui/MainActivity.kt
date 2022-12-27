@@ -105,10 +105,12 @@ class MainActivity : AppCompatActivity() {
                    }
                } else {
                    Toast.makeText(this@MainActivity,getString(R.string.error_message),Toast.LENGTH_LONG).show()
+                   setupAdapter(ArrayList<Repository>())
                }
             }
             override fun onFailure(call: Call<List<Repository>>, t: Throwable) {
                 Toast.makeText(this@MainActivity,getString(R.string.error_message),Toast.LENGTH_LONG).show()
+                setupAdapter(ArrayList<Repository>())
             }
         })
     }
