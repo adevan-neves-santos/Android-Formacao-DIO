@@ -31,16 +31,34 @@ public final class RepositoryItemBinding implements ViewBinding {
   public final ImageView ivShare;
 
   @NonNull
+  public final ImageView ivStar;
+
+  @NonNull
+  public final TextView tvRepositoryCreationDate;
+
+  @NonNull
+  public final TextView tvRepositoryLanguage;
+
+  @NonNull
   public final TextView tvRepositoryName;
+
+  @NonNull
+  public final TextView tvStarsCount;
 
   private RepositoryItemBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout clCardContent, @NonNull CardView cvCar, @NonNull ImageView ivShare,
-      @NonNull TextView tvRepositoryName) {
+      @NonNull ImageView ivStar, @NonNull TextView tvRepositoryCreationDate,
+      @NonNull TextView tvRepositoryLanguage, @NonNull TextView tvRepositoryName,
+      @NonNull TextView tvStarsCount) {
     this.rootView = rootView;
     this.clCardContent = clCardContent;
     this.cvCar = cvCar;
     this.ivShare = ivShare;
+    this.ivStar = ivStar;
+    this.tvRepositoryCreationDate = tvRepositoryCreationDate;
+    this.tvRepositoryLanguage = tvRepositoryLanguage;
     this.tvRepositoryName = tvRepositoryName;
+    this.tvStarsCount = tvStarsCount;
   }
 
   @Override
@@ -88,14 +106,38 @@ public final class RepositoryItemBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.iv_star;
+      ImageView ivStar = ViewBindings.findChildViewById(rootView, id);
+      if (ivStar == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_repository_creation_date;
+      TextView tvRepositoryCreationDate = ViewBindings.findChildViewById(rootView, id);
+      if (tvRepositoryCreationDate == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_repository_language;
+      TextView tvRepositoryLanguage = ViewBindings.findChildViewById(rootView, id);
+      if (tvRepositoryLanguage == null) {
+        break missingId;
+      }
+
       id = R.id.tv_repository_name;
       TextView tvRepositoryName = ViewBindings.findChildViewById(rootView, id);
       if (tvRepositoryName == null) {
         break missingId;
       }
 
+      id = R.id.tv_stars_count;
+      TextView tvStarsCount = ViewBindings.findChildViewById(rootView, id);
+      if (tvStarsCount == null) {
+        break missingId;
+      }
+
       return new RepositoryItemBinding((ConstraintLayout) rootView, clCardContent, cvCar, ivShare,
-          tvRepositoryName);
+          ivStar, tvRepositoryCreationDate, tvRepositoryLanguage, tvRepositoryName, tvStarsCount);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

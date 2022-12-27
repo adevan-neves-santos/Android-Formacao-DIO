@@ -84,16 +84,20 @@
         "source": "/home/adevan/.gradle/daemon/7.3.3/br.com.igorbag.githubsearch.app-debug-30:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
+        "merged": "/home/adevan/.gradle/daemon/7.3.3/br.com.igorbag.githubsearch.app-merged_res-29:/drawable_ic_star.xml.flat",
+        "source": "/home/adevan/.gradle/daemon/7.3.3/br.com.igorbag.githubsearch.app-main-31:/drawable/ic_star.xml"
+    },
+    {
         "merged": "/home/adevan/.gradle/daemon/7.3.3/br.com.igorbag.githubsearch.app-merged_res-29:/xml_backup_rules.xml.flat",
         "source": "/home/adevan/.gradle/daemon/7.3.3/br.com.igorbag.githubsearch.app-main-31:/xml/backup_rules.xml"
     },
     {
-        "merged": "/home/adevan/.gradle/daemon/7.3.3/br.com.igorbag.githubsearch.app-merged_res-29:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "/home/adevan/.gradle/daemon/7.3.3/br.com.igorbag.githubsearch.app-main-31:/mipmap-mdpi/ic_launcher_round.webp"
-    },
-    {
         "merged": "/home/adevan/.gradle/daemon/7.3.3/br.com.igorbag.githubsearch.app-merged_res-29:/layout_activity_main.xml.flat",
         "source": "/home/adevan/.gradle/daemon/7.3.3/br.com.igorbag.githubsearch.app-main-31:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/adevan/.gradle/daemon/7.3.3/br.com.igorbag.githubsearch.app-merged_res-29:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/adevan/.gradle/daemon/7.3.3/br.com.igorbag.githubsearch.app-main-31:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
         "merged": "/home/adevan/.gradle/daemon/7.3.3/br.com.igorbag.githubsearch.app-merged_res-29:/mipmap-xhdpi_ic_launcher.webp.flat",

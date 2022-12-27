@@ -1,24 +1,29 @@
 R_DEF: Internal format may change without notice
 local
 color black
-color gray
+color card_background
 color ic_launcher_background
+color primary_700
 color purple_200
 color purple_500
-color purple_700
 color teal_200
 color teal_700
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_share
+drawable ic_star
 id btn_confirmar
 id cl_card_content
 id cv_car
 id et_nome_usuario
 id iv_share
+id iv_star
 id rv_lista_repositories
+id tv_repository_creation_date
+id tv_repository_language
 id tv_repository_name
+id tv_stars_count
 id tv_titulo
 layout activity_main
 layout repository_item

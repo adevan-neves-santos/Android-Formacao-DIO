@@ -11,6 +11,7 @@ import br.com.igorbag.githubsearch.databinding.ActivityMainBinding
 import br.com.igorbag.githubsearch.databinding.RepositoryItemBinding
 import br.com.igorbag.githubsearch.domain.Repository
 import kotlinx.coroutines.flow.combine
+import org.w3c.dom.Text
 
 class RepositoryAdapter(private val repositories: List<Repository>) :
     RecyclerView.Adapter<RepositoryAdapter.ViewHolder>() {
@@ -48,6 +49,9 @@ class RepositoryAdapter(private val repositories: List<Repository>) :
             btnShareLister(repositoryItem)
         }
         holder.textRepositoryName.text = repositoryItem.name
+        holder.textStarsCount.text     = repositoryItem.starsCount.toString()
+        holder.textLanguage.text       = repositoryItem.language
+        holder.textCreationDate.text   = repositoryItem.creationDate.substring(0,10).split("-")[0]
     }
 
     // Pega a quantidade de repositorios da lista
@@ -65,10 +69,16 @@ class RepositoryAdapter(private val repositories: List<Repository>) :
         //    }
         val imageShare : ImageView
         val textRepositoryName: TextView
+        val textStarsCount:TextView
+        val textLanguage: TextView
+        val textCreationDate:TextView
         init {
             view.apply {
                 imageShare         = findViewById(R.id.iv_share)
                 textRepositoryName = findViewById(R.id.tv_repository_name)
+                textStarsCount     = findViewById(R.id.tv_stars_count)
+                textLanguage       = findViewById(R.id.tv_repository_language)
+                textCreationDate   = findViewById(R.id.tv_repository_creation_date)
             }
         }
     }

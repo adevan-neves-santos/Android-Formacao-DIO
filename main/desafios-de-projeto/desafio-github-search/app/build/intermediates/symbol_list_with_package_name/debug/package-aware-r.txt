@@ -1215,6 +1215,7 @@ color bright_foreground_material_dark
 color bright_foreground_material_light
 color button_material_dark
 color button_material_light
+color card_background
 color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
@@ -1266,7 +1267,6 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
-color gray
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color ic_launcher_background
@@ -1745,6 +1745,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color primary_700
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1755,7 +1756,6 @@ color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
 color purple_200
 color purple_500
-color purple_700
 color radiobutton_themeable_attribute_color
 color ripple_material_dark
 color ripple_material_light
@@ -2471,6 +2471,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_share
+drawable ic_star
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -2753,6 +2754,7 @@ id inward
 id italic
 id item_touch_helper_previous_elevation
 id iv_share
+id iv_star
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -2984,7 +2986,10 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_repository_creation_date
+id tv_repository_language
 id tv_repository_name
+id tv_stars_count
 id tv_titulo
 id unchecked
 id uniform
