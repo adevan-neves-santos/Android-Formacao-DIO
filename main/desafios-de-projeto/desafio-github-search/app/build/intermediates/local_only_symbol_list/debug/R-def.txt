@@ -1,0 +1,34 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color gray
+color ic_launcher_background
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable ic_share
+id btn_confirmar
+id cl_card_content
+id cv_car
+id et_nome_usuario
+id iv_share
+id rv_lista_repositories
+id tv_repository_name
+id tv_titulo
+layout activity_main
+layout repository_item
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string confirmar
+string error_message
+string nome_usuario
+string save_user_name
+style Theme.GitHubSearch
+xml backup_rules
+xml data_extraction_rules
