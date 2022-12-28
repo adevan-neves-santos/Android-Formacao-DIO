@@ -27,6 +27,8 @@
         </activity>
         <activity android:name="me.dio.materialdesignestudo.ButtonsActivity" />
         <activity android:name="me.dio.materialdesignestudo.TextFieldsActivity" />
+        <activity android:name="me.dio.materialdesignestudo.TopAppBarActivity"
+            android:theme="@style/Theme.Material3.Light.NoActionBar"/>
     </application>
 
 </manifest>

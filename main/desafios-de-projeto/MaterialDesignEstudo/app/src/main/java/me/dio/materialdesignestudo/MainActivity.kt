@@ -23,5 +23,8 @@ class MainActivity : AppCompatActivity() {
         binding.cdBottomSheets.setOnClickListener {
             ModalBottomSheet.start(supportFragmentManager)
         }
+        binding.cdTopAppBar.setOnClickListener {
+            startActivity(TopAppBarActivity.createIntent(this))
+        }
     }
 }
