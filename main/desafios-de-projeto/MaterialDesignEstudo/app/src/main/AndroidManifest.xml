@@ -26,6 +26,7 @@
                 android:value="" />
         </activity>
         <activity android:name="me.dio.materialdesignestudo.ButtonsActivity" />
+        <activity android:name="me.dio.materialdesignestudo.TextFieldsActivity" />
     </application>
 
 </manifest>

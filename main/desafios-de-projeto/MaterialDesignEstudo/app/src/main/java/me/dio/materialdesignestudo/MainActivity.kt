@@ -17,5 +17,11 @@ class MainActivity : AppCompatActivity() {
         binding.cdButtons.setOnClickListener {
             startActivity(ButtonsActivity.createIntent(this))
         }
+        binding.cdTextFields.setOnClickListener {
+            startActivity(TextFieldsActivity.createIntent(this))
+        }
+        binding.cdBottomSheets.setOnClickListener {
+            ModalBottomSheet.start(supportFragmentManager)
+        }
     }
 }
