@@ -26,5 +26,11 @@ class MainActivity : AppCompatActivity() {
         binding.cdTopAppBar.setOnClickListener {
             startActivity(TopAppBarActivity.createIntent(this))
         }
+        binding.cdBottomAppBar.setOnClickListener {
+            startActivity(BottomAppbarActivity.createIntent(this))
+        }
+        binding.cdSnackbars.setOnClickListener {
+            startActivity(SnackbarActivity.createIntent(this))
+        }
     }
 }

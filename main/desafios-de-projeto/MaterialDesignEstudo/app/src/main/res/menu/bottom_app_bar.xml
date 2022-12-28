@@ -1,0 +1,27 @@
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/edit"
+        android:title="Edit"
+        android:icon="@drawable/ic_person"
+        android:contentDescription="NO"
+        app:showAsAction="ifRoom"
+         />
+
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/ic_favorite_24dp"
+        android:title="Favorite"
+        android:contentDescription="No"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/more"
+        android:title="More"
+        android:contentDescription="NO"
+        app:showAsAction="never" />
+
+</menu>
