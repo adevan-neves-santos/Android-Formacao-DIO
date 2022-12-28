@@ -32,5 +32,8 @@ class MainActivity : AppCompatActivity() {
         binding.cdSnackbars.setOnClickListener {
             startActivity(SnackbarActivity.createIntent(this))
         }
+        binding.cdBottomNavigation.setOnClickListener {
+            startActivity(BottomNavigationActivity.createIntent(this))
+        }
     }
 }

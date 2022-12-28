@@ -31,6 +31,7 @@
             android:theme="@style/Theme.Material3.Light.NoActionBar"/>
         <activity android:name="me.dio.materialdesignestudo.BottomAppbarActivity" />
         <activity android:name="me.dio.materialdesignestudo.SnackbarActivity" />
+        <activity android:name="me.dio.materialdesignestudo.BottomNavigationActivity" />
     </application>
 
 </manifest>
