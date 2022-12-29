@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NavigationEstudo</string>
+    <string name="hitn_name">Name</string>
+    <string name="hint_age">Age</string>
+    <string name="button_next">Next</string>
+    <string name="hint_street">street</string>
+    <string name="hint_number">number</string>
+</resources>
