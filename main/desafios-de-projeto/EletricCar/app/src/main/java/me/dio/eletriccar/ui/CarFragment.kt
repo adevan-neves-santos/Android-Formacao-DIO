@@ -48,7 +48,6 @@ import java.net.URL
 
 class CarFragment : Fragment() {
 
-    lateinit var btnCalcular: FloatingActionButton
     lateinit var listaCarros: RecyclerView
     lateinit var progress: ProgressBar
     lateinit var noInternetImage: ImageView
@@ -74,7 +73,6 @@ class CarFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupRetrofit()
         setupView()
-        setupListeners()
     }
 
     override fun onResume() {
@@ -129,7 +127,6 @@ class CarFragment : Fragment() {
     }
 
     private fun setupView(){
-        btnCalcular     = binding.fabCalcular
         listaCarros     = binding.rvListaCarros
         progress        = binding.pbLoader
         noInternetImage = binding.ivEmptyState
@@ -144,12 +141,6 @@ class CarFragment : Fragment() {
         }
         carroAdapter.carItemLister = {carro ->
             val isSaved = CarRepository(requireContext()).saveIfNotExists(carro)
-        }
-    }
-
-    private fun setupListeners() {
-        btnCalcular.setOnClickListener {
-            startActivity(Intent(context,CalcularAutonomiaActivity::class.java))
         }
     }
 
