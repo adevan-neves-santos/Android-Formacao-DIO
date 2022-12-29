@@ -24,12 +24,12 @@ class PersonalDataFragment : Fragment() {
         binding.btnNext.setOnClickListener {
             val model = PersonModel(
                 name = binding.tilName.text,
-                age = binding.tilAge.text.toInt(),
-                "",
-                0
+                age = binding.tilAge.text.toInt()
             )
-            findNavController().navigate(R.id.go_to_adressDataFragment)
-            // TODO mandar os dados para o outro fragment
+            // TODO : Aviso, o fragment que irá receber o argumento deve ter declarado em nav_graph a TAG argument
+            // eu confundi com a tela anterior a ele e nãoe estava aceitando
+            val directions = PersonalDataFragmentDirections.goToAdressDataFragment(model)
+            findNavController().navigate(directions)
         }
     }
 

@@ -18,5 +18,21 @@
         android:id="@+id/adressDataFragment"
         android:name="me.dio.navigationestudo.fragments.AdressDataFragment"
         android:label="AdressDataFragment"
-        tools:layout="@layout/fragment_adress"/>
+        tools:layout="@layout/fragment_adress">
+        <argument
+            android:name="model"
+            app:argType="me.dio.navigationestudo.model.PersonModel" />
+        <action
+            android:id="@+id/go_to_resumeFragment"
+            app:destination="@id/resumeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resumeFragment"
+        tools:layout="@layout/fragment_resume"
+        android:name="me.dio.navigationestudo.fragments.ResumeFragment"
+        android:label="ResumeFragment">
+        <argument
+            android:name="model"
+            app:argType="me.dio.navigationestudo.model.PersonModel" />
+    </fragment>
 </navigation>
